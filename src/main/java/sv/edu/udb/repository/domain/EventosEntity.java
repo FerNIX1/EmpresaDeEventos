@@ -42,7 +42,7 @@ public class EventosEntity {
     private String descripcion;
     @Basic
     @Column(name = "tipo_evento", nullable = false)
-    private Object tipoEvento;
+    private String tipoEvento;
 
     public int getId() {
         return id;
@@ -92,11 +92,11 @@ public class EventosEntity {
         this.descripcion = descripcion;
     }
 
-    public Object getTipoEvento() {
+    public String getTipoEvento() {
         return tipoEvento;
     }
 
-    public void setTipoEvento(Object tipoEvento) {
+    public void setTipoEvento(String tipoEvento) {
         this.tipoEvento = tipoEvento;
     }
 
