@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 @Table(name = "eventos_asistentes", schema = "eventos_catedra")
 
 @NamedQueries({
+        @NamedQuery(name = "EventosAsistentesEntity.findAll", query = "SELECT ea FROM EventosAsistentesEntity ea"),
         @NamedQuery(name = "EventosAsistentesEntity.findById", query = "SELECT ea FROM EventosAsistentesEntity ea WHERE ea.id = :id"),
         @NamedQuery(name = "EventosAsistentesEntity.findByIdEvento", query = "SELECT ea FROM EventosAsistentesEntity ea WHERE ea.idEvento = :idEvento"),
         @NamedQuery(name = "EventosAsistentesEntity.findByIdAsistente", query = "SELECT ea FROM EventosAsistentesEntity ea WHERE ea.idAsistente = :idAsistente"),
