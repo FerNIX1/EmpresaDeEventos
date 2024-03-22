@@ -16,7 +16,8 @@ import java.sql.Time;
         @NamedQuery(name = "EventosEntity.findByHora", query = "SELECT e FROM EventosEntity e WHERE e.hora = :hora"),
         @NamedQuery(name = "EventosEntity.findByLugar", query = "SELECT e FROM EventosEntity e WHERE e.lugar = :lugar"),
         @NamedQuery(name = "EventosEntity.findByDescripcion", query = "SELECT e FROM EventosEntity e WHERE e.descripcion = :descripcion"),
-        @NamedQuery(name = "EventosEntity.findByTipoEvento", query = "SELECT e FROM EventosEntity e WHERE e.tipoEvento = :tipoEvento")
+        @NamedQuery(name = "EventosEntity.findByTipoEvento", query = "SELECT e FROM EventosEntity e WHERE e.tipoEvento = :tipoEvento"),
+        @NamedQuery(name = "EventosEntity.isExist", query = "SELECT COUNT(e) FROM EventosEntity e WHERE e.id = :id")
 })
 
 public class EventosEntity {

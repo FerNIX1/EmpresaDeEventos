@@ -8,7 +8,8 @@ import jakarta.persistence.*;
 @NamedQueries({
         @NamedQuery(name = "EventosAsistentesEntity.findById", query = "SELECT ea FROM EventosAsistentesEntity ea WHERE ea.id = :id"),
         @NamedQuery(name = "EventosAsistentesEntity.findByIdEvento", query = "SELECT ea FROM EventosAsistentesEntity ea WHERE ea.idEvento = :idEvento"),
-        @NamedQuery(name = "EventosAsistentesEntity.findByIdAsistente", query = "SELECT ea FROM EventosAsistentesEntity ea WHERE ea.idAsistente = :idAsistente")
+        @NamedQuery(name = "EventosAsistentesEntity.findByIdAsistente", query = "SELECT ea FROM EventosAsistentesEntity ea WHERE ea.idAsistente = :idAsistente"),
+        @NamedQuery(name = "EventosAsistentesEntity.isExist", query = "SELECT COUNT(ea) FROM EventosAsistentesEntity ea WHERE ea.id = :id")
 })
 
 public class EventosAsistentesEntity {

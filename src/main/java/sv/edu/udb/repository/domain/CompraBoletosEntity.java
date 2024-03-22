@@ -15,7 +15,8 @@ import java.sql.Timestamp;
         @NamedQuery(name = "CompraBoletosEntity.findByIdAsistente", query = "SELECT cb FROM CompraBoletosEntity cb WHERE cb.idAsistente = :idAsistente"),
         @NamedQuery(name = "CompraBoletosEntity.findByCantidad", query = "SELECT cb FROM CompraBoletosEntity cb WHERE cb.cantidad = :cantidad"),
         @NamedQuery(name = "CompraBoletosEntity.findByPrecioTotal", query = "SELECT cb FROM CompraBoletosEntity cb WHERE cb.precioTotal = :precioTotal"),
-        @NamedQuery(name = "CompraBoletosEntity.findByFechaCompra", query = "SELECT cb FROM CompraBoletosEntity cb WHERE cb.fechaCompra = :fechaCompra")
+        @NamedQuery(name = "CompraBoletosEntity.findByFechaCompra", query = "SELECT cb FROM CompraBoletosEntity cb WHERE cb.fechaCompra = :fechaCompra"),
+        @NamedQuery(name = "CompraBoletosEntity.isExist", query = "SELECT COUNT(cb) FROM CompraBoletosEntity cb WHERE cb.id = :id")
 })
 
 public class CompraBoletosEntity {
