@@ -13,8 +13,7 @@ import jakarta.persistence.*;
         @NamedQuery(name = "AsistentesEntity.findByTelefono", query = "SELECT a FROM AsistentesEntity a WHERE a.telefono = :telefono"),
         @NamedQuery(name = "AsistentesEntity.findByDireccion", query = "SELECT a FROM AsistentesEntity a WHERE a.direccion = :direccion"),
         @NamedQuery(name = "AsistentesEntity.isExist", query = "SELECT COUNT(a) FROM AsistentesEntity a WHERE a.id = :id")
-
-                })
+        })
 
 public class AsistentesEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
